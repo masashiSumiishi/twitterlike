@@ -8,14 +8,11 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= render 'layouts/shim' %>
   </head>
-
   <body>
     <%= render 'layouts/header' %>
     <div class="contents">
       <%= yield %>
     </div>
-    <footer>
-      <p>作成日：20020/4  by Masashi</p>
-    </footer>
+    <%= render 'layouts/footer' %>
   </body>
 </html>
