@@ -6,9 +6,34 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!--[if lt IE9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+   </script>
+    <![endif]-->
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <div class="header">
+        <div class="header__elements">
+          <div class="header__logo">
+            <%= link_to "sample app", '#', class: "header__logo" %>
+          </div>
+          <nav class="header__nav">
+            <ul class="header__ul">
+              <li class="header__navList"><%= link_to "Home", '#', class:"header__navLink" %></li>
+              <li class="header__navList"><%= link_to "Help", '#', class:"header__navLink" %></li>
+              <li class="header__navList"><%= link_to "Login", '#', class:"header__navLink" %></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div class="contents">
+      <%= yield %>
+    </div>
+    <footer>
+      <p>作成日：20020/4  by Masashi</p>
+    </footer>
   </body>
 </html>

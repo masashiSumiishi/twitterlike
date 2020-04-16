@@ -1,2 +1,16 @@
-<h1>Twitter</h1>
-<p>Ruby on Rails Tutorial</p>
+<div class="home">
+  <h1 class="home__title">Twitter</h1>
+  <p>的なもの</p>
+  <p class="home__description">Ruby on Rails Tutorialをもとに作成</p>
+  <%= link_to "Sign Up", '#', class:"home__buttonLink" %>
+  <div id="js-mail-left" class="home__mailContentLeft">
+    <%= link_to image_tag("mail.png", alt:"mail logo", class:"home__mailImg") %>
+  </div>
+  <div id="js-mail-right" class="home__mailContentRight">
+    <%= link_to image_tag("mail.png", alt:"mail logo", class:"home__mailImg") %>
+  </div>
+  <div class="home__mailBox">
+    <%= link_to image_tag("mailbox.png", alt:"mail box", class:"home__mailImg") %>
+  </div>
+  <p class="home__descriptionMessage">これは、あなたの考えや思いを世界に向けて発信するサービスです！</p>
+</div>

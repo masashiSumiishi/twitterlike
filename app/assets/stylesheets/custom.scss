@@ -1,0 +1,110 @@
+/* 共通 */
+.shadow {
+  display: none;
+}
+/* header */
+.header {
+  background-color: #61AAE8;
+  width: 100%;
+  &__elements {
+    padding: 20px 50px;
+    display: flex;
+  }
+  &__logo {
+    text-decoration: none;
+    color: #fff;
+    font-size: 26px;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  &__nav {
+    margin: 0 0 0 auto;
+  }
+  &__ul {
+    display: flex;
+    justify-content: flex-start;
+  }
+  &__navList {
+    list-style: none;
+    margin-left: 30px;
+  }
+  &__navLink {
+    color: #fff;
+    text-decoration: none;
+    vertical-align: sub;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+/* footer */
+footer {
+  background-color: #61AAE8;
+  color: #fff;
+  height: 50px;
+  text-align: right;
+  padding: 10px 20px;
+}
+/* home */
+.contents {
+  margin: 55px auto 100px;
+  .home {
+    margin: 0 auto;
+    width: 500px;
+    text-align: center;
+    position: relative;
+    &__title {
+      font-size: 78px;
+      transition: font-size 1s;
+      &:hover {
+        font-size: 100px;
+      }
+    }
+    &__description {
+      margin-top: 60px;
+    }
+    &__descriptionMessage {
+      font-size: 30px;
+      font-weight: bold;
+      margin-top: 23px;
+      display: none;
+    }
+    &__buttonLink {
+      margin: 50px auto;
+      display: block;
+      text-decoration: none;
+      border: 1px solid #61AAE8;
+      background-color: #61AAE8;
+      color: #fff;
+      width: 200px;
+      height: 70px;
+      padding: 21px;
+      border-radius: 12px;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+    &__mailContentLeft {
+      position: absolute;
+      width: 12%;
+      top: 7px;
+      transform: rotate(-45deg);
+    }
+    &__mailContentRight {
+      position: absolute;
+      width: 12%;
+      top: 7px;
+      right: 5px;
+      transform: rotate(45deg);
+    }
+    &__mailBox {
+      width: 20%;
+      margin: 0 auto;
+    }
+    .home__mailImg {
+      width: 100%;
+      display: block;
+    }
+  }
+}
