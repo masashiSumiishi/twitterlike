@@ -9,6 +9,6 @@ $(function(){
   }, 1000);
 
   setTimeout(function(){
-    $('.home__descriptionMessage').fadeIn(1000);
+    $('.home__descriptionMessage').fadeIn(2000);
   }, 5000);
 });

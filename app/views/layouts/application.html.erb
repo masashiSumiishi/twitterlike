@@ -6,29 +6,11 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <!--[if lt IE9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
-   </script>
-    <![endif]-->
+    <%= render 'layouts/shim' %>
   </head>
 
   <body>
-    <header>
-      <div class="header">
-        <div class="header__elements">
-          <div class="header__logo">
-            <%= link_to "sample app", '#', class: "header__logo" %>
-          </div>
-          <nav class="header__nav">
-            <ul class="header__ul">
-              <li class="header__navList"><%= link_to "Home", '#', class:"header__navLink" %></li>
-              <li class="header__navList"><%= link_to "Help", '#', class:"header__navLink" %></li>
-              <li class="header__navList"><%= link_to "Login", '#', class:"header__navLink" %></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </header>
+    <%= render 'layouts/header' %>
     <div class="contents">
       <%= yield %>
     </div>
