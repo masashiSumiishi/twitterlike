@@ -2,12 +2,12 @@
   <div class="header">
     <div class="header__elements">
       <div class="header__logo">
-        <%= link_to "sample app", '#', class: "header__logo" %>
+        <%= link_to "sample app", root_path, class: "header__logo" %>
       </div>
       <nav class="header__nav">
         <ul class="header__ul">
-          <li class="header__navList"><%= link_to "Home", '#', class:"header__navLink" %></li>
-          <li class="header__navList"><%= link_to "Help", '#', class:"header__navLink" %></li>
+          <li class="header__navList"><%= link_to "Home", root_path, class:"header__navLink" %></li>
+          <li class="header__navList"><%= link_to "Help", help_path, class:"header__navLink" %></li>
           <li class="header__navList"><%= link_to "Login", '#', class:"header__navLink" %></li>
         </ul>
       </nav>
