@@ -1,8 +1,14 @@
 /* 共通 */
 $base-blue: #61AAE8;
 $white: #fff;
+$red: #FF0900;
 .shadow {
   display: none;
+}
+/* エラー文 */
+.error {
+  color: $red;
+  margin-bottom: 40px;
 }
 /* header */
 .header {

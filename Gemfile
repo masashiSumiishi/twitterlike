@@ -7,6 +7,7 @@ end
 
 gem 'rails',        '5.1.6'
 gem 'bcrypt',       '3.1.12'
+gem 'rails-i18n'
 gem 'puma',         '3.9.1'
 gem 'sass-rails',   '5.0.6'
 gem 'uglifier',     '3.2.0'
