@@ -4,6 +4,14 @@ $white: #fff;
 $red: #FF0900;
 $green: #45FF9F;
 
+body {
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+}
+.contents {
+  flex: 1;
+}
 .shadow {
   display: none;
 }
@@ -139,21 +147,26 @@ footer {
     }
   }
 }
-/* 新規登録 users/new */
-.signUpTitle {
+/* 新規登録(users/new)・Login(sessions/new)  */
+.formTitle {
   font-size: 30px;
   text-align: center;
   position: relative;
 }
-.signUpIcon__img {
+.formIcon__img {
   display: block;
   width: 100%;
 }
-.signUpIcon {
+.formIcon {
   width: 17%;
   position: absolute;
+  top: 115px;
+  left: 8px;
 }
-.signUp {
+.formIcon--login {
+  top: 111px
+}
+.form {
   width: 500px;
   margin: 35px auto 0;
   &__element {
@@ -189,5 +202,9 @@ footer {
     width: 300px;
     height: 50px;
     border-radius: 10px;
+  }
+  &__signupLink {
+    text-align: center;
+    margin-top: 45px;
   }
 }

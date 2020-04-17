@@ -1,27 +1,27 @@
 <% provide(:title, 'Sign up') %>
-<h1 class="signUpTitle">新規登録</h1>
-<div class="signUpIcon">
-  <%= image_tag "blue-bird.jpg", class:"signUpIcon__img" %>
+<h1 class="formTitle">新規登録</h1>
+<div class="formIcon">
+  <%= image_tag "blue-bird.jpg", class:"formIcon__img" %>
 </div>
-<div class="signUp">
+<div class="form">
   <%= form_for(@user) do |f| %>
     <%= render 'shared/error_messages' %>
-    <div class="signUp__element signUp__element--name">
-      <%= f.label :name, "名前", class:"signUp__label" %>
-      <%= f.text_field :name, class:"signUp__input", placeholder:"名前" %>
+    <div class="form__element">
+      <%= f.label :name, "名前", class:"form__label" %>
+      <%= f.text_field :name, class:"form__input", placeholder:"名前" %>
     </div>
-    <div class="signUp__element signUp__element--email">
-      <%= f.label :email, class: "signUp__label" %>
-      <%= f.email_field :email, class:"signUp__input", placeholder:"email" %>
+    <div class="form__element">
+      <%= f.label :email, class: "form__label" %>
+      <%= f.email_field :email, class:"form__input", placeholder:"email" %>
     </div>
-    <div class="signUp__element signUp__element--password">
-      <%= f.label :password, class: "signUp__label" %>
-      <%= f.password_field :password, class:"signUp__input", placeholder:"password" %>
+    <div class="form__element">
+      <%= f.label :password, class: "form__label" %>
+      <%= f.password_field :password, class:"form__input", placeholder:"password" %>
     </div>
-    <div class="signUp__element signUp__element--confirmation">
-      <%= f.label :password_confirmation, "Passwordの確認", class: "signUp__label" %>
-      <%= f.password_field :password_confirmation, class:"signUp__input", placeholder:"Passwordの確認" %>
+    <div class="form__element">
+      <%= f.label :password_confirmation, "Passwordの確認", class: "form__label" %>
+      <%= f.password_field :password_confirmation, class:"form__input", placeholder:"Passwordの確認" %>
     </div>
-    <%= f.submit "アカウントを作成する", class: "signUp__btn" %>
+    <%= f.submit "アカウントを作成する", class: "form__btn" %>
   <% end %>
 </div>

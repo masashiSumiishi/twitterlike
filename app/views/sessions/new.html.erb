@@ -1,0 +1,19 @@
+<% provide(:title, "Log in")%>
+<h1 class="formTitle">Log in</h1>
+<div class="formIcon formIcon--login">
+  <%= image_tag "blue-bird.jpg", class:"formIcon__img" %>
+</div>
+<div class="form">
+  <%= form_for(:session, url:login_path) do |f| %>
+  <div class="form__element">
+    <%= f.label :email, class: "form__label" %>
+    <%= f.email_field :email, class:"form__input", placeholder:"email" %>
+  </div>
+  <div class="form__element">
+    <%= f.label :password, class: "form__label" %>
+    <%= f.password_field :password, class:"form__input", placeholder:"password" %>
+  </div>
+  <%= f.submit "Log in", class: "form__btn" %>
+  <% end %>
+  <p class="form__signupLink">アカウントを作成しますか？<%= link_to "新規登録", signup_path %></p>
+</div>
