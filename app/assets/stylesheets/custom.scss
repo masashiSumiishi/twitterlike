@@ -110,3 +110,55 @@ footer {
     }
   }
 }
+/* 新規登録 users/new */
+.signUpTitle {
+  font-size: 30px;
+  text-align: center;
+  position: relative;
+}
+.signUpIcon__img {
+  display: block;
+  width: 100%;
+}
+.signUpIcon {
+  width: 17%;
+  position: absolute;
+}
+.signUp {
+  width: 500px;
+  margin: 35px auto 0;
+  &__element {
+    display: flex;
+    border: 1px solid;
+  }
+  &__element + &__element {
+    border-top: none;
+  }
+  &__label {
+    font-size: 20px;
+    width: 200px;
+    display: block;
+    border-right: 1px solid;
+    padding-left: 22px;
+  }
+  &__input {
+    width: 260px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  &__input:focus {
+    box-shadow: 0 0 9px 0 $base-blue;
+    border: 5px solid #FFF !important;
+    outline: 0;
+  }
+  &__btn {
+    margin: 60px auto 0;
+    display: block;
+    border: 1px solid #61AAE8;
+    background-color: #61AAE8;
+    color: #fff;
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+  }
+}

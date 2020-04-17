@@ -1,3 +1,26 @@
 <% provide(:title, 'Sign up') %>
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<h1 class="signUpTitle">新規登録</h1>
+<div class="signUpIcon">
+  <%= image_tag "blue-bird.jpg", class:"signUpIcon__img" %>
+</div>
+<div class="signUp">
+  <%= form_for(@user) do |f| %>
+    <div class="signUp__element signUp__element--name">
+      <%= f.label :name, "名前", class:"signUp__label" %>
+      <%= f.text_field :name, class:"signUp__input", placeholder:"名前" %>
+    </div>
+    <div class="signUp__element signUp__element--email">
+      <%= f.label :email, class: "signUp__label" %>
+      <%= f.email_field :email, class:"signUp__input", placeholder:"email" %>
+    </div>
+    <div class="signUp__element signUp__element--password">
+      <%= f.label :password, class: "signUp__label" %>
+      <%= f.password_field :password, class:"signUp__input", placeholder:"password" %>
+    </div>
+    <div class="signUp__element signUp__element--confirmation">
+      <%= f.label :password_confirmation, "Passwordの確認", class: "signUp__label" %>
+      <%= f.password_field :password_confirmation, class:"signUp__input", placeholder:"Passwordの確認" %>
+    </div>
+    <%= f.submit "アカウントを作成する", class: "signUp__btn" %>
+  <% end %>
+</div>
