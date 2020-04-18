@@ -8,7 +8,12 @@
         <ul class="header__ul">
           <li class="header__navList"><%= link_to "Home", root_path, class:"header__navLink" %></li>
           <li class="header__navList"><%= link_to "Help", help_path, class:"header__navLink" %></li>
-          <li class="header__navList"><%= link_to "Login", '#', class:"header__navLink" %></li>
+          <% if logged_in? %>
+            <li class="header__navList"><%= link_to "Users", '#', class:"header__navLink" %></li>
+            <li class="header__navList"><%= link_to "Log out", logout_path, method: :delete, class:"header__navLink" %></li>
+          <% else %>
+            <li class="header__navList"><%= link_to "Log in", login_path, class:"header__navLink" %></li>
+          <% end %>
         </ul>
       </nav>
     </div>
