@@ -13,6 +13,12 @@
     <%= f.label :password, class: "form__label" %>
     <%= f.password_field :password, class:"form__input", placeholder:"password" %>
   </div>
+  <div class="form__checkbox">
+    <%= f.label :remember_me do %>
+      <%= f.check_box :remember_me %>
+      <span>Remember me on this computer</span>
+    <% end %>
+  </div>
   <%= f.submit "Log in", class: "form__btn" %>
   <% end %>
   <p class="form__signupLink">アカウントを作成しますか？<%= link_to "新規登録", signup_path %></p>

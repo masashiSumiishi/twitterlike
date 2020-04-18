@@ -190,6 +190,10 @@ footer {
     border: 5px solid #FFF !important;
     outline: 0;
   }
+  &__checkbox {
+    text-align: center;
+    margin-top: 25px
+  }
   &__btn {
     margin: 60px auto 0;
     display: block;
