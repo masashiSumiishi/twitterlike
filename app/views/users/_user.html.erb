@@ -1,4 +1,9 @@
 <li class="usersList">
   <%= gravatar_for user, size: 50 %>
-  <%= link_to user.name, user, class:"usersList__link" %>
+  <% if current_user.admin? && !current_user?(user) %>
+    <%= link_to user.name, user, class:"usersList__link" %>
+    <%= link_to "delete", user, class:"usersList__linkDelete", method: :delete, data:{confirm: "削除しますか？"} %>
+  <% else %>
+    <%= link_to user.name, user, class:"usersList__link" %>
+  <% end %>
 </li>

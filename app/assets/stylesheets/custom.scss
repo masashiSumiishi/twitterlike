@@ -241,4 +241,10 @@ footer {
       color: $base-blue;
     }
   }
+  &__linkDelete {
+    text-decoration: none;
+    padding: 11px 0 0 20px;
+    border-left: 1px solid $black;
+    color: $red;
+  }
 }
