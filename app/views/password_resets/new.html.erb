@@ -1,0 +1,14 @@
+<% provide(:title, "パスワードの再設定")%>
+<h1 class="formTitle">パスワードの再設定</h1>
+<div class="formIcon formIcon--login">
+  <%= image_tag "blue-bird.jpg", class:"formIcon__img" %>
+</div>
+<div class="form">
+  <%= form_for(:password_reset, url:password_resets_path) do |f| %>
+  <div class="form__element">
+    <%= f.label :email, class: "form__label" %>
+    <%= f.email_field :email, class:"form__input", placeholder:"email" %>
+  </div>
+  <%= f.submit "送信", class: "form__btn" %>
+  <% end %>
+</div>
