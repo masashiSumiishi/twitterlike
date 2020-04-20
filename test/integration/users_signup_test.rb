@@ -1,6 +1,10 @@
 require 'test_helper'
 
 class UsersSignupTest < ActionDispatch::IntegrationTest
+  def setup
+    ActionMailer::Base.deliveries.clear
+  end
+
   test "invalid signup information" do
     get signup_path
     assert_no_difference 'User.count' do
@@ -21,6 +25,21 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
         }
       }
     end
+    assert_equal 1, ActionMailer::Base.deliveries.size
+    user = assigns(:user)
+    assert_not user.activated?
+    #有効化していない状態でログイン
+    log_in_as(user)
+    assert_not is_logged_in?
+    #有効化トークンが不正な場合
+    get edit_account_activation_path("invalid token", email: user.email)
+    assert_not is_logged_in?
+    #トークンは正しいがemailが無効な場合
+    get edit_account_activation_path(user.activation_token, email:"wrong")
+    assert_not is_logged_in?
+    #有効化トークンが正しい場合
+    get edit_account_activation_path(user.activation_token, email:user.email)
+    assert user.reload.activated?
     follow_redirect!
     assert_template 'users/show'
     assert is_logged_in?
