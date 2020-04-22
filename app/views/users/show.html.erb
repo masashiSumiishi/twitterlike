@@ -1,5 +1,22 @@
 <% provide(:title, @user.name) %>
-<h1>
-  <%= gravatar_for @user %>
-  <%= @user.name %>
-</h1>
+<div class="user">
+  <div class="userProfile">
+    <div>
+      <div class="userProfile__img">
+        <%= gravatar_for @user %>
+      </div>
+      <p class="userProfile__name">
+        <%= @user.name %>
+      </p>
+    </div>
+  </div>
+  <div class="userMicropost">
+    <% if @user.microposts.any? %>
+      <h3 class="userMicropost__title">Tweet(<%= @user.microposts.count %>)</h3>
+      <ol class="userMicropost__lists">
+        <%= render @microposts %>
+      </ol>
+      <%= will_paginate @microposts, :previous_label=>'&#171;前', :next_label=>'次&#187;' %>
+    <% end %>
+  </div>
+</div>

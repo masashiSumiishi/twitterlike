@@ -252,3 +252,54 @@ footer {
     color: $red;
   }
 }
+/* user個人のページ /users/id */
+.user {
+  .userProfile {
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    &__img {
+      display: block;
+      margin: auto;
+    }
+    &__name {
+      font-size: 20px;
+    }
+  }
+  .userMicropost {
+    width: 600px;
+    margin: 50px auto 0;
+    &__title {
+      text-align: center;
+    }
+    &__lists {
+      list-style: none;
+      margin-top: 30px;
+    }
+  }
+  .micropost {
+    width: 450px;
+    margin: 0 auto 20px;
+    box-shadow: 2px 2px 4px;
+    padding: 10px;
+    &__profile {
+      display: flex;
+    }
+    &__profileName {
+      padding-top: 15px;
+      margin-left: 15px;
+      a {
+        text-decoration: none;
+      }
+    }
+    &__content {
+      text-align: center;
+    }
+    &__timestamp {
+      padding-left: 20px;
+    }
+  }
+  .pagination {
+    margin: 0 auto;
+  }
+}
