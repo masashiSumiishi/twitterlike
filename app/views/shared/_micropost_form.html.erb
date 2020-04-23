@@ -1,0 +1,9 @@
+<div class="micropostForm">
+  <%= form_for(@micropost) do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
+    <div class="micropostForm__textArea">
+      <%= f.text_area :content, placeholder: "Tweetしよう！" %>
+    </div>
+    <%= f.submit "Tweet", class: "micropostForm__Button"%>
+  <% end %>
+</div>

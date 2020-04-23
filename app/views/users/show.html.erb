@@ -9,6 +9,9 @@
         <%= @user.name %>
       </p>
     </div>
+    <% if logged_in? && @user.id == current_user.id %>
+      <%= render 'shared/micropost_form' %>
+    <% end %>
   </div>
   <div class="userMicropost">
     <% if @user.microposts.any? %>

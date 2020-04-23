@@ -303,3 +303,20 @@ footer {
     margin: 0 auto;
   }
 }
+/* micropostForm shared/_micropost */
+.micropostForm {
+  margin-top: 20px;
+  &__textArea {
+    textarea {
+      border: 1px solid
+    }
+  }
+  &__Button {
+    border: 1px solid #61AAE8;
+    background-color: #61AAE8;
+    color: #fff;
+    margin-top: 15px;
+    width: 150px;
+    height: 35px;
+  }
+}
