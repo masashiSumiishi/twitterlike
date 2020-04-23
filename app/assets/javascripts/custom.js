@@ -11,4 +11,18 @@ $(function(){
   setTimeout(function(){
     $('.home__descriptionMessage').fadeIn(2000);
   }, 5000);
+
+  $("#toggle").click(function(){
+    $("#menu").slideToggle();
+    return false;
+  });
+  $(window).resize(function(){
+    let win = $(window).width();
+    let p = 750;
+    if(win > p){
+      $("#menu").show();
+    }else {
+      $("#menu").hide();
+    }
+  })
 });

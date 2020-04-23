@@ -61,10 +61,10 @@ body {
     margin: 0 0 0 auto;
   }
   &__ul {
-    display: flex;
     justify-content: flex-start;
   }
   &__navList {
+    display: inline-block;
     list-style: none;
     margin-left: 30px;
   }
@@ -72,11 +72,43 @@ body {
     color: $white;
     text-decoration: none;
     vertical-align: sub;
+    line-height: 37px;
     &:hover {
       opacity: 0.7;
     }
   }
+  &__menu {
+    display: none;
+  }
 }
+@media screen and(max-width: 750px) {
+  .header__nav {
+    margin: 0 0 0 10px;
+  }
+  .header__logo {
+    width: 70%;
+  }
+  .header__menu {
+    display: block;
+    width: 20%;
+    margin-left: 50px;
+    a {
+      display: block;
+      text-decoration: none;
+      color: $white;
+      line-height: 36px;
+      font-size: 19px;
+    }
+  }
+  .header__navList {
+    width: 100%;
+    height: 40px;
+    margin: 0;
+    text-align: center;
+    border-bottom: 1px solid $white;
+  }
+}
+
 /* footer */
 footer {
   background-color: $base-blue;
@@ -255,7 +287,6 @@ footer {
 /* user個人のページ /users/id */
 .user {
   .userProfile {
-    width: 500px;
     margin: 0 auto;
     text-align: center;
     &__img {
@@ -267,7 +298,6 @@ footer {
     }
   }
   .userMicropost {
-    width: 600px;
     margin: 50px auto 0;
     &__title {
       text-align: center;
@@ -278,7 +308,6 @@ footer {
     }
   }
   .micropost {
-    width: 450px;
     margin: 0 auto 20px;
     box-shadow: 2px 2px 4px;
     padding: 10px;
@@ -303,12 +332,23 @@ footer {
     margin: 0 auto;
   }
 }
+@media screen and (max-width: 375px) {
+  .micropost {
+    width: 80%;
+  }
+}
 /* micropostForm shared/_micropost */
 .micropostForm {
   margin-top: 20px;
   &__textArea {
     textarea {
-      border: 1px solid
+      border: 1px solid;
+      width: 300px;
+      height: 100px;
+      &::placeholder{
+        text-align: center;
+        padding-top: 40px;
+      }
     }
   }
   &__Button {
