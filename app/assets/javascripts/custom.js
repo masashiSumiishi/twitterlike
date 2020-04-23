@@ -21,8 +21,6 @@ $(function(){
     let p = 750;
     if(win > p){
       $("#menu").show();
-    }else {
-      $("#menu").hide();
     }
   })
 });
