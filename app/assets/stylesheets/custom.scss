@@ -330,6 +330,13 @@ footer {
     &__timestamp {
       padding-left: 20px;
     }
+    &__delete {
+      border-left: 1px solid;
+      padding-left: 9px;
+      a {
+        text-decoration: none;
+      }
+    }
   }
   .pagination {
     margin: 0 auto;
