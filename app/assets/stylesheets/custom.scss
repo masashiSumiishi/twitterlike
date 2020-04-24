@@ -179,6 +179,11 @@ footer {
     }
   }
 }
+@media screen and(max-width: 750px) {
+  .contents .home {
+    width: auto;
+  }
+}
 /* 新規登録(users/new)・Login(sessions/new)  */
 .formTitle {
   font-size: 30px;
@@ -363,7 +368,7 @@ footer {
   }
   &__picture {
     width: 300px;
-    margin: 7px auto 0; 
+    margin: 7px auto 0;
     input {
       display: block;
     }
