@@ -24,3 +24,9 @@ $(function(){
     }
   })
 });
+$('#micropost_picture').bind('change', function(){
+  let size_in_megabytes = this.filse[0].size/1024/1024;
+  if(size_in_megabytes > 5) {
+    alert('upladできるサイズは5MBまでです。もっと小さくしてください！')
+  }
+})

@@ -4,6 +4,9 @@
     <div class="micropostForm__textArea">
       <%= f.text_area :content, placeholder: "Tweetしよう！" %>
     </div>
+    <div class="micropostForm__picture">
+      <%= f.file_field :picture, accept: 'image/jpeg, image/gif, image/png' %>
+    </div>
     <%= f.submit "Tweet", class: "micropostForm__Button"%>
   <% end %>
 </div>

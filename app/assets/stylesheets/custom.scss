@@ -361,6 +361,13 @@ footer {
       }
     }
   }
+  &__picture {
+    width: 300px;
+    margin: 7px auto 0; 
+    input {
+      display: block;
+    }
+  }
   &__Button {
     border: 1px solid #61AAE8;
     background-color: #61AAE8;
