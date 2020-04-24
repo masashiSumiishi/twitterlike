@@ -13,9 +13,10 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get home" do
-    get root_path
+    @user = users(:michael)
+    get user_path(@user)
     assert_response :success
-    assert_select "title", "#{@base_title}"
+    assert_select "title", "#{@user.name} | #{@base_title}"
   end
 
   test "should get help" do
