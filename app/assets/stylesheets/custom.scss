@@ -237,8 +237,8 @@ footer {
   &__btn {
     margin: 60px auto 0;
     display: block;
-    border: 1px solid #61AAE8;
-    background-color: #61AAE8;
+    border: 1px solid $base-blue;
+    background-color: $base-blue;
     color: #fff;
     width: 300px;
     height: 50px;
@@ -374,11 +374,30 @@ footer {
     }
   }
   &__Button {
-    border: 1px solid #61AAE8;
-    background-color: #61AAE8;
+    border: 1px solid $base-blue;
+    background-color: $base-blue;
     color: #fff;
     margin-top: 15px;
     width: 150px;
     height: 35px;
   }
+}
+/* shared/_stats */
+.statsLink{
+  text-decoration: none;
+  color: $black;
+}
+.statsLink--following {
+  border-right: 1px solid;
+  padding-right: 6px;
+  margin-right: 10px;
+}
+/* users/_follow_form, _follow, _unfollow */
+.followForm__btn {
+  border: 1px solid $base-blue;
+  background-color: $base-blue;
+  color: #fff;
+  margin-top: 15px;
+  width: 150px;
+  height: 35px;
 }

@@ -8,7 +8,9 @@
       <p class="userProfile__name">
         <%= @user.name %>
       </p>
+      <%= render 'shared/stats' %>
     </div>
+    <%= render 'follow_form' if logged_in?%>
     <% if logged_in? && @user.id == current_user.id %>
       <%= render 'shared/micropost_form' %>
     <% end %>
