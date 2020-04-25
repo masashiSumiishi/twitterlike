@@ -1,0 +1,22 @@
+<% provide(:title, @title) %>
+<div class="follows">
+  <aside class="followUser">
+    <div class="followUser__profile">
+      <p class="followUser__profilePicture"><%= gravatar_for @user %></p>
+      <p class="followUser__profileName"><%= @user.name %></p>
+      <p class="followUser__profileTweet">Tweets:<%= @user.microposts.count %></p>
+    </div>
+    <section class="followStats">
+      <%= render 'shared/stats'%>
+    </section>
+  </aside>
+  <div class="followProfile">
+    <p class="followProfile__title"><%= @title %></p>
+    <% if @users.any? %>
+      <ul class="followProfile__content">
+        <%= render @users %>
+      </ul>
+      <%= will_paginate %>
+    <% end %>
+  </div>
+</div>

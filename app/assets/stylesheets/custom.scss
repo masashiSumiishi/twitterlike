@@ -401,3 +401,42 @@ footer {
   width: 150px;
   height: 35px;
 }
+/* フォロー、フォロワー画面　show_follow */
+.follows {
+  display: flex;
+  width: 650px;
+  .followUser {
+    text-align: center;
+    margin: 0 auto;
+    &__profileName {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+  .followProfile {
+    &__title {
+      margin: 20px 0 10px 0;
+      font-size: 18px;
+      text-align: center;
+      display: flex;
+      &::before, &::after {
+        border-top: 1px solid;
+        content: "";
+        flex-grow: 1;
+        margin-top: 14px;
+      }
+      &::before {
+        margin-right: 1rem;
+      }
+      &::after {
+        margin-left: 1rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: 750px) {
+  .follow {
+    display: block;
+    width: auto;
+  }
+}
