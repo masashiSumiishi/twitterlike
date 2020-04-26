@@ -11,4 +11,7 @@
   <% if current_user?(micropost.user) %>
     <span class="micropost__delete"><%= link_to "削除する", micropost, method: :delete, data: { confirm: "削除しますか？"} %></span>
   <% end %>
+  <div>
+    <%= render "likes/like", micropost: micropost %>
+  </div>
 </li>
