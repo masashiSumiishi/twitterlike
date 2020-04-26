@@ -265,6 +265,22 @@ footer {
 .usersTitle {
   text-align: center;
 }
+.usersSearch {
+  width: 200px;
+  margin: 15px auto;
+  form {
+    display: flex;
+  }
+  &__textField {
+    border: 1px solid;
+  }
+  &__btn {
+    border: 1px solid $base-blue;
+    background-color: $base-blue;
+    color: #fff;
+    margin-left: 5px;
+  }
+}
 .users {
   margin-top: 30px;
   list-style: none;
