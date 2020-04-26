@@ -66,13 +66,20 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to root_url
   end
 
-  test "shuld redirect following when not logged in" do
+  test "should redirect following when not logged in" do
     get following_user_path(@user)
     assert_redirected_to login_url
   end
 
-  test "shuld redirect followers when not logged in" do
+  test "should redirect followers when not logged in" do
     get followers_user_path(@user)
     assert_redirected_to login_url
+  end
+
+  test "should search when keyword exists" do
+    log_in_as(@user)
+    get users_path(@user)
+    get users_path, params: {search: @other_user.name}
+    assert_select "a", @other_user.name
   end
 end
