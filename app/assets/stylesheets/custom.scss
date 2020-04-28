@@ -456,3 +456,47 @@ footer {
     width: auto;
   }
 }
+/* 投稿一覧 /microposts*/
+.micropostIndex {
+  width: 500px;
+  margin: 0 auto;
+  .micropostIndexTitle {
+    text-align: center;
+  }
+  .micropostIndexLists {
+    list-style: none;
+  }
+  .micropostIndexList {
+    box-shadow: 2px 2px 4px;
+    margin-bottom: 5px;
+    padding: 15px;
+    a {
+      text-decoration: none;
+      color: $black;
+    }
+    &__profile {
+      display: flex;
+      margin: 0 auto;
+    }
+    &__profileName {
+      line-height: 80px;
+    font-size: 20px;
+    margin-left: 25px;
+    }
+    &__bottom {
+      display: flex;
+      margin-left: 59%;
+      button {
+        margin-left: 20px
+      }
+    }
+  }
+}
+@media screen and (max-width: 375px) {
+  .micropostIndex {
+    width: 350px;
+    .micropostIndexList__bottom {
+      margin-left: 43%;
+    }
+  }
+}

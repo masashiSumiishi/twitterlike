@@ -1,0 +1,25 @@
+<% provide(:title, "投稿一覧") %>
+<div class="micropostIndex">
+  <h1 class="micropostIndexTitle">投稿一覧</h1>
+  <ul class="micropostIndexLists">
+    <%= @microposts.each do |micropost| %>
+      <li class="micropostIndexList">
+        <%= link_to(micropost.user) do %>
+          <div class="micropostIndexList__profile">
+            <%= gravatar_for(micropost.user) %>
+            <p class="micropostIndexList__profileName"><%= micropost.user.name %></p>
+          </div>
+          <div class="micropostIndexList__content">
+            <%= micropost.content %>
+          </div>
+          <div class="micropostIndexList__bottom">
+            <p>
+              <%= time_ago_in_words(micropost.created_at) %>前
+            </p>
+            <%= render "likes/like", micropost: micropost %>
+          </div>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</div>
