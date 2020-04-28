@@ -4,6 +4,7 @@
       <%= form_for(micropost.likes.find_by(user_id: current_user.id), method: :delete) do |f| %>
       <%= button_tag(class: "btn btn-default btn-xs") do %>
         <%= content_tag :span, "いいね済み", class: "glyphicon glyphicon-heart" %>
+        <%= micropost.likes_count %>
       <% end %>
       <% end %>
     <% else %>
@@ -11,6 +12,7 @@
         <div><%= hidden_field_tag :micropost_id, micropost.id %></div>
         <%= button_tag(class: "btn btn-default btn-xs") do %>
           <%= content_tag :span, "いいね", class: "glyphicon glyphicon-heart-empty" %>
+          <%= micropost.likes_count %>
       <% end %>
       <% end %>
     <% end %>
